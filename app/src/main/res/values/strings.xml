@@ -1,0 +1,15 @@
+<resources>
+<string name="app_name">Math Test</string>
+<string name="testSelectionTV">Выберите тест!</string>
+<string name="additionBtn">Сложение (2 + 2 = 4)</string>
+<string name="subtractionBtn">Вычитание (4 – 2 = 2)</string>
+<string name="multiplicationBtn">Умножение (2 * 2 = 4)</string>
+<string name="divisionBtn">Деление (4 / 2 = 2)</string>
+    <string name="true_Btn">Верно</string>
+    <string name="false_Btn">Неверно</string>
+    <string name="correct_toast">Правильно!</string>
+    <string name="incorrect_toast">Неправильно!</string>
+    <string name="showAnswerBtn">   Подсказка   </string>
+    <string name="restartBtn">Повторить игру</string>
+    <string name="backBtn">Вернуться к вопросам</string>
+</resources>

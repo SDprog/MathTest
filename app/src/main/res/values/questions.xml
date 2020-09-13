@@ -1,0 +1,26 @@
+<resources>
+<string name="addition1">2 + 2 = 4</string>
+<string name="addition2">7 + 3 = 9</string>
+<string name="addition3">4 + 6 = 10</string>
+<string name="addition4">5 + 8 = 12</string>
+<string name="addition5">9 + 5 = 14</string>
+
+<string name="subtraction1">6 – 2 = 4</string>
+<string name="subtraction2">8 – 3 = 6</string>
+<string name="subtraction3">12 – 6 = 8</string>
+<string name="subtraction4">17 – 4 = 13</string>
+<string name="subtraction5">9 – 5 = 3</string>
+
+<string name="multiplication1">2 * 2 = 4</string>
+<string name="multiplication2">7 * 3 = 15</string>
+<string name="multiplication3">9 * 6 = 45</string>
+<string name="multiplication4">8 * 8 = 62</string>
+<string name="multiplication5">4 * 5 = 20</string>
+
+<string name="division1">4 / 2 = 2</string>
+<string name="division2">18 / 3 = 5</string>
+<string name="division3">20 / 10 = 2</string>
+<string name="division4">9 / 3 = 4</string>
+<string name="division5">8 / 8 = 1</string>
+
+</resources>
