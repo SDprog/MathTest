@@ -3,6 +3,7 @@ package ru.developersementsov.mathtest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -86,21 +87,6 @@ public class QuestionsActivity extends AppCompatActivity {
         else if (getIntent().getStringExtra("array").equals("divisionArray"))
             questions = divisionArray;
 
-
-//        switch (getIntent().getStringExtra("array")) {
-//            case "additionArray":
-//                questions = additionArray;
-//                break;
-//            case "subtractionArray":
-//                questions = subtractionArray;
-//                break;
-//            case "multiplicationArray":
-//                questions = multiplicationArray;
-//                break;
-//            case "divisionArray":
-//                questions = divisionArray;
-//                break;
-//        }
 
         int question = questions[currentIndex].getQuestionTextId();
         textView.setText(question);
@@ -203,41 +189,5 @@ public class QuestionsActivity extends AppCompatActivity {
         }
        else
            textView.setText(questions[currentIndex].getQuestionTextId());
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        Log.d(TAG, "Метод onStart() запущен");
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        Log.d(TAG, "Метод onResume() запущен");
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        Log.d(TAG, "Метод onPause() запущен");
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        Log.d(TAG, "Метод onStop() запущен");
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        Log.d(TAG, "Метод onDestroy() запущен");
-    }
-
-    @Override
-    public void onRestart() {
-        super.onRestart();
-        Log.d(TAG, "Метод onRestart() запущен");
     }
 }

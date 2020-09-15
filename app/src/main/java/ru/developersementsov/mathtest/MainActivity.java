@@ -1,7 +1,10 @@
 package ru.developersementsov.mathtest;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -25,46 +28,6 @@ public class MainActivity extends AppCompatActivity {
         subtractionBtn = findViewById(R.id.subtractionBtn);
         multiplicationBtn = findViewById(R.id.multiplicationBtn);
         divisionBtn = findViewById(R.id.divisionBtn);
-
-        /*additionBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, QuestionsActivity.class);
-                String str = "addition";
-                intent.putExtra("array", str);
-                startActivity(intent);
-            }
-        });
-        subtractionBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, QuestionsActivity.class);
-                String str = "addition";
-                intent.putExtra("array", str);
-                startActivity(intent);
-            }
-        });
-
-        multiplicationBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, QuestionsActivity.class);
-                String str = "addition";
-                intent.putExtra("array", str);
-                startActivity(intent);
-            }
-        });
-
-        divisionBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, QuestionsActivity.class);
-                String str = "addition";
-                intent.putExtra("array", str);
-                startActivity(intent);
-            }
-        });
-*/
     }
 
     public void onClick(View v) {
@@ -90,9 +53,27 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /*public void goToQuestions(View view) {
-        Intent intent = new Intent(MainActivity.this, QuestionsActivity.class);
-        //intent.putExtra("answer", questions);
-        startActivity(intent);
-    }*/
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        Intent browserIntent;
+        switch(id){
+            case R.id.about_menu :
+                browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=Dmitry+Sementsov"));
+                startActivity(browserIntent);
+                return true;
+            case R.id.privacy_menu:
+                browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://developersementsov.github.io/App-Privacy-Policy"));
+                startActivity(browserIntent);
+                return true;
+
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
